@@ -1,2 +1,2 @@
-const a = 2
+const a = 21
 console.log(a)
