@@ -3,7 +3,6 @@ name: Сборка проекта
 on:
   pull_request:
     types: [ opened ]
-  push:
 
 jobs:
   build:
