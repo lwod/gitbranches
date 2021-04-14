@@ -2,8 +2,7 @@ name: Сборка проекта
 
 on:
   pull_request:
-    branches:
-      - '*'
+    types: [ opened ]
   push:
     branches:
       - 'main'
