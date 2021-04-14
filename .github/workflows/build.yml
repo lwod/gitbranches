@@ -1,4 +1,4 @@
-name: Build
+name: Сборка проекта
 
 on:
   pull_request:
@@ -13,8 +13,12 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: build project
+      - name: Сборка проекта
         run: |
-          echo "start build"
-          npm run start
-          echo "finish build"
+          echo "началос сборки"
+          npm run build
+          echo "конец сборки"
+      - name: Тест покрытия проекта
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ sectrets.CODECOV_TOKEN }}
