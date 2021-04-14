@@ -1,8 +1,8 @@
-const {telegrammBot} = require('./telegraf')
+const {telegramBot} = require('./telegraf')
 
 const start = async () => {
 	try {
-		await telegrammBot()
+		await telegramBot()
 	}catch (e) {
 		console.log(e)
 	}
