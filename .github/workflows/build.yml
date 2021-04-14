@@ -21,4 +21,4 @@ jobs:
       - name: Тест покрытия проекта
         uses: codecov/codecov-action@v1
         with:
-          token: ${{ sectrets.CODECOV_TOKEN }}
+          token: ${{ secrets.CODECOV_TOKEN }}
