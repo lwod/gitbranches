@@ -1,0 +1,20 @@
+name: Сборка проекта
+
+on:
+  pull_request:
+    types: [ opened ]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Сборка проекта
+        run: |
+          echo "началос сборки"
+          npm run build
+          echo "конец сборки"
+      - name: Тест покрытия проекта
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
