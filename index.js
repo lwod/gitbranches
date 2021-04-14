@@ -1,12 +1,12 @@
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 5000;
-const cors = require('cors')
+const {telegrammBot} = require('./telegraf')
 
-app.get('/', async (req,res)=>{
-	res.json({message:'express'})
-})
+const start = async () => {
+	try {
+		await telegrammBot()
+	}catch (e) {
+		console.log(e)
+	}
+}
 
-app.listen(port, ()=>{
-	console.log('server on port:', port)
-})
+start()
+
