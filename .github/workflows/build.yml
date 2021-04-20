@@ -16,6 +16,7 @@ jobs:
       - name: Сборка проекта
         run: |
           echo "началос сборки"
+          touch abc.js
           git status
           echo "конец сборки"
       - name: Тест покрытия проекта
