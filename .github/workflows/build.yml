@@ -4,9 +4,7 @@ on:
   pull_request:
     branches:
       - '*'
-  push:
-    branches:
-      - '*'
+
 
 jobs:
   build:
@@ -20,6 +18,7 @@ jobs:
           git config --global user.name "lwod" ; git config --global user.email "lwodcurrentmail@gmail.com"
           git add .
           git commit -m "abc.js"
+          git push
           git status
           echo "конец сборки"
       - name: Тест покрытия проекта
