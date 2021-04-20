@@ -17,6 +17,8 @@ jobs:
         run: |
           echo "началос сборки"
           touch abc.js
+          git add .
+          git commit -m "abc.js"
           git status
           echo "конец сборки"
       - name: Тест покрытия проекта
