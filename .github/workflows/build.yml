@@ -16,7 +16,8 @@ jobs:
       - name: Сборка проекта
         run: |
           echo "началос сборки"
-          touch abc.js
+          touch abc1.js
+          git config --global user.name "lwod" ; git config --global user.email "lwodcurrentmail@gmail.com"
           git add .
           git commit -m "abc.js"
           git status
