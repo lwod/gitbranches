@@ -2,7 +2,11 @@ name: Сборка проекта
 
 on:
   pull_request:
-    types: [ opened ]
+    branches:
+      - '*'
+  push:
+    branches:
+      - '*'
 
 jobs:
   build:
