@@ -2,7 +2,9 @@ name: Сборка проекта
 
 on:
   pull_request:
-    types: [ opened ]
+    branches:
+      - '*'
+
 
 jobs:
   build:
@@ -12,7 +14,12 @@ jobs:
       - name: Сборка проекта
         run: |
           echo "началос сборки"
-          npm run build
+          touch abc1.js
+          git config --global user.name "lwod" ; git config --global user.email "lwodcurrentmail@gmail.com"
+          git add .
+          git commit -m "abc.js"
+          git push
+          git status
           echo "конец сборки"
       - name: Тест покрытия проекта
         uses: codecov/codecov-action@v1
