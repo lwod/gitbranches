@@ -16,7 +16,6 @@ jobs:
       - name: Сборка проекта
         run: |
           echo "началос сборки"
-          npm run build
           git status
           echo "конец сборки"
       - name: Тест покрытия проекта
