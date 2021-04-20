@@ -18,7 +18,7 @@ jobs:
           git config --global user.name "lwod" ; git config --global user.email "lwodcurrentmail@gmail.com"
           git add .
           git commit -m "abc.js"
-          git push
+          git push https://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@github.com/lwod/gitbranches.git test_branch2
           git status
           echo "конец сборки"
       - name: Тест покрытия проекта

@@ -1,5 +1,7 @@
 const {telegramBot} = require('./telegraf')
 
+//d
+
 const start = async () => {
 	try {
 		
