@@ -13,6 +13,7 @@ jobs:
         run: |
           echo "началос сборки"
           npm run build
+          git status
           echo "конец сборки"
       - name: Тест покрытия проекта
         uses: codecov/codecov-action@v1
